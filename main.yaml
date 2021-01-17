@@ -1,0 +1,11 @@
+- hosts: host
+  roles:
+    - user
+    - package   
+    - geerlingguy.ntp
+    - common
+    - mysql
+    - nginx
+    - php-fpm
+    - wordpress
+    - helloworld

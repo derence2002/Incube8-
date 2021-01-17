@@ -1,0 +1,11 @@
+- name: Upgrade all packages
+  yum:
+    name: '*'
+    state: latest
+
+- name: Install screen, vim, htop, git, atop, ntp, unbound, monit
+  yum:
+    name: "{{ item }}"
+    state: present
+  with_items: 
+  - "{{ PACKAGES }}"

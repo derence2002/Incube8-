@@ -1,0 +1,8 @@
+- name: Upload HelloWorld script
+  template: src=helloworld.sh.j2 dest=/usr/local/bin/helloworld.sh mode=700
+- name: HelloWorld | Create Unit file
+  template: src=helloworld.service.j2 dest=/lib/systemd/system/helloworld.service mode=644
+  notify:
+    - reload systemctl
+- name: helloworld start
+  service: name=helloworld.service state=started enabled=yes

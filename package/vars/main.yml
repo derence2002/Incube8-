@@ -1,0 +1,13 @@
+---
+# vars file for user
+
+PACKAGES:
+- screen
+- vim
+- htop
+- git
+- atop
+- ntp
+- unbound
+- monit
+
